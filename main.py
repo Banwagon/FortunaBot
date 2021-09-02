@@ -19,11 +19,14 @@ async def on_ready():
 
 @client.command()
 async def roll(ctx):
-  await ctx.send(f"{ctx.message.author.mention} rolled {random.randint(1,100)} (1-100)")
+  if ctx.message.author.id == 214553002277732352: #Added for Brice
+    await ctx.send(f"{ctx.message.author.mention} rolled 69 (69-69), Becasue Brice said so.") #Added for Brice
+  if ctx.message.author.id != 214553002277732352: #Added for Brice
+    await ctx.send(f"{ctx.message.author.mention} rolled {random.randint(1,100)} (1-100)")
 
-@client.command()
-async def brice(ctx):
-  await ctx.send(f"{ctx.message.author.mention} rolled a 69 (69-69), _becasue Brice said so_")
+@client.command() #Added for Brice
+async def brice(ctx): #Added for Brice
+  await ctx.send(f"{ctx.message.author.mention} rolled a 69 (69-69), _Becasue Brice said so_") #Added for Brice
 
 @client.command(aliases=['loot'])
 async def question(ctx, *, question):
