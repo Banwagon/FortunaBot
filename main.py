@@ -9,8 +9,6 @@ import asyncio
 #from replit import db
 from discord.ext import commands
 #from keep_alive import keep_alive
-#from MaxEmbeds import EmbedBuilder
-#from boto.s3.connection import S3Connection
 
 #keep_alive()  #script that will ping server
 client = commands.Bot(command_prefix='$')  #sets command prefix as $
