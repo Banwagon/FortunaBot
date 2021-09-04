@@ -20,14 +20,14 @@ client = commands.Bot(command_prefix='$')  #sets command prefix as $
 #### Set Bot Activity ####
 @client.event
 async def on_ready():  #will post when bot is ready
-    ##Setting `Playing ` status##
+    ##Setting `Playing` status##
     #await client.change_presence(activity=discord.Game(name="a game"))
     await client.change_presence(activity=discord.Game(name="Visual Studio Code")) #For Testing Only
-    ##Setting `Streaming ` status##
+    ##Setting `Streaming` status##
     #await client.change_presence(activity=discord.Streaming(name="My Stream", url=my_twitch_url))
-    #Setting `Listening ` status##
+    ##Setting `Listening` status##
     #await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="a song"))
-    ##Setting `Watching ` status##
+    ##Setting `Watching` status##
     #await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="a movie"))
     #await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Brice Undress \U0001f44C"))  #Sets bots status to Watching Brice Undress :ok_hand:
     print('Bot is ready, logged in as {0.user}'.format(client))  #console print that the bot is online as username
@@ -72,6 +72,17 @@ masked_link_embed = discord.Embed(
     description='You have just rolled a **69** for your lord and savior, <@{}> the waifu king.  [Click here to honor your Senpai.](https://www.youtube.com/watch?v=iik25wqIuFo)'.format(brice),
     color=15844367
     )
+
+#### Direct Message ####
+@client.command()
+async def send_dm(ctx, member: discord.Member, *, content): #$send_dm <user> <message>
+    channel = await member.create_dm()
+    await channel.send(content)
+
+#### Webhooks ####
+
+
+#### WebScrapping ####
 
 #### Purge Command ####
 @client.command()
