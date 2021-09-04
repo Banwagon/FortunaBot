@@ -1,0 +1,23 @@
+ctx.channel.purge(limit=5) #will delete 5 messages, including command line
+
+ctx.message.author.id == idnumber #will check if message was posted by a certain user
+
+ctx.message.author.mention #@mention the message user in reponse
+
+random.randint(1,100) #gives a random integer between 1-100
+
+asyncio.sleep(120) #will pause following commands for 120 seconds
+
+ctx.message.delete() #will delete the users message after post
+
+#Setting `Playing ` status
+await bot.change_presence(activity=discord.Game(name="a game"))
+
+#Setting `Streaming ` status
+await bot.change_presence(activity=discord.Streaming(name="My Stream", url=my_twitch_url))
+
+#Setting `Listening ` status
+await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="a song"))
+
+#Setting `Watching ` status
+await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="a movie"))

@@ -1,0 +1,7 @@
+python = "^3.8"
+discord = "^1.7.3"
+beautifulsoup4 = "^4.9.3"
+lxml = "^4.6.3"
+replit = "^3.2.4"
+Flask = "^2.0.1"
+maxembeds = "^0.0.1"
