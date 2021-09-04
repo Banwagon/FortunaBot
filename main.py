@@ -10,11 +10,12 @@ import asyncio
 from discord.ext import commands
 #from keep_alive import keep_alive
 #from MaxEmbeds import EmbedBuilder
-#from boto.s3.connection import S3Connection
+from boto.s3.connection import S3Connection
 
 #keep_alive()  #script that will ping server
 client = commands.Bot(command_prefix='$')  #sets command prefix as $
-brice = os.environ['brice']
+#brice = os.environ['brice']
+brice = S3Handler(os.environ['brice'])
 
 masked_link_embed = discord.Embed(  #embedded linkes
     #title = 'Click here for a good time',
@@ -69,5 +70,6 @@ async def question(ctx, *, question):
     ##Alternate Formt##
     #await ctx.send(f'{ctx.author.mention} has started the lottery for: __**{question}**__\n\n{ctx.message.guild.default_role} please __**$roll**__ if you are interested.')
 
-my_secret = os.environ['passcode']  #discord password, hidden in file
+#my_secret = os.environ['passcode']  #discord password, hidden in file
+my_secret = S3Handler(os.environ['passcode'])  #discord password, hidden in file
 client.run(my_secret)  #call forward password
