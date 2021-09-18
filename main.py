@@ -42,7 +42,7 @@ async def cmd(ctx):  #Displays a list of usable commands
 ## Available Commands ##
 cmd_embed=discord.Embed(
     title="__Fortuna Bot Commands__", 
-    url="https://raw.githubusercontent.com/Banwagon/FortunaBot/test/FortunaBot-Test/commands.txt", 
+    url="https://raw.githubusercontent.com/Banwagon/FortunaBot/main/commands.txt", 
     description="Here is a list of commands that I will recognize.",
     color=0x109319
     )
