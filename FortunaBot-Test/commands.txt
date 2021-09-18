@@ -1,13 +1,17 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<h1>This is heading 1</h1>
-<h2>This is heading 2</h2>
-<h3>This is heading 3</h3>
-<h4>This is heading 4</h4>
-<h5>This is heading 5</h5>
-<h6>This is heading 6</h6>
-
-</body>
-</html>
+########################################################################
+####                                                                ####
+#######################   Fortuna Bot Commands   #######################
+####                                                                ####
+########################################################################
+#                                                                      #
+#  $loot   - Starts a rolloff for the item listed                      #
+#                                                                      #
+#  $roll   - Performs a random 1-100 roll, unless your name is Brice   #
+#                                                                      #
+#  $brice  - Pays homage to our Waifu King                             #
+#                                                                      #
+#  $purge  - Will purge 10 messages or a set amount                    #
+#                                                                      #
+########################################################################
+########################### edited 9/18/2021 ###########################
+########################################################################
