@@ -32,7 +32,30 @@ async def on_ready():  #will post when bot is ready
     #await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="Brice Undress \U0001f44C"))  #Sets bots status to Watching Brice Undress :ok_hand:
     print('Bot is ready, logged in as {0.user}'.format(client))  #console print that the bot is online as username
 
+### Commands ###
+## Posting - Embed ##
+@client.command()
+async def cmd(ctx):  #Displays a list of usable commands
+    await ctx.send(f"{ctx.message.author.mention}".format(), embed=cmd_embed) #Calls the Commands Embed
+
 #### Embeds ####
+## Available Commands ##
+cmd_embed=discord.Embed(
+    title="__Fortuna Bot Commands__", 
+    url="https://raw.githubusercontent.com/Banwagon/FortunaBot/test/FortunaBot-Test/commands.txt", 
+    description="Here is a list of commands that I will recognize.",
+    color=0x109319
+    )
+cmd_embed.add_field(
+    name="Command List  -",
+    value="**\n$loot\n\n$roll\n\n$brice\n\n$purge**",
+    inline=True)
+cmd_embed.add_field(
+    name="Description",
+    value="*_\nStarts a rolloff for the item listed\n\nPerforms a random 1-100 roll, unless your name is __**Brice**__\n\nPays hommage to our Waifu King\n\nWill purge 10 messages or a set ammount_*",
+    inline=True)
+
+## Example ##
 #embed=discord.Embed(
     #title="Sample Embed", 
     #url="https://realdrewdata.medium.com/", 
@@ -80,7 +103,6 @@ async def send_dm(ctx, member: discord.Member, *, content): #$send_dm <user> <me
     await channel.send(content)
 
 #### Webhooks ####
-
 
 #### WebScrapping ####
 
